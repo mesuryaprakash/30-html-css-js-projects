@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Photos</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;   
+            align-items: center;
+            flex-direction: column;
+            /* background-color: rgb(187, 171, 234); */
+        }
+        .image-container{
+            text-align: center;
+        }
+        .image-container img{
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+            height: 300px;
+            width: 300px;
+            background-color: lightgray;
+        }
+        .btn{
+            background-color: rgb(77, 51, 250);
+            border: none;
+            padding: 10px 20px;
+            margin: 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+        }
+        .btn:hover{
+            /* background-color: rgb(77, 51, 250, 0.8); */
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://picsum.photos/300?random=1">
+        <img src="https://picsum.photos/300?random=2">
+        <img src="https://picsum.photos/300?random=3">
+        <img src="https://picsum.photos/300?random=4">
+        <img src="https://picsum.photos/300?random=6">
+        <img src="https://picsum.photos/300?random=5">
+    </div>
+    <button class="btn">Load More</button>
+    <script>
+        const imageContainerElement = document.querySelector('.image-container');
+        const btnElement = document.querySelector('.btn');
+        btnElement.addEventListener('click', () => {
+            addNewImages();
+        })
+
+        function addNewImages(){
+            for(let i = 0; i < 3; i++){
+                const newImageElement = document.createElement('img');
+            newImageElement.src = `https://picsum.photos/300?random=${Math.floor(Math.random() * 500)}`;
+            imageContainerElement.appendChild(newImageElement);
+            }
+        }
+    </script>
+</body>
+</html>
