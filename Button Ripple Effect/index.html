@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Ripple Effect</title>
+    <style>
+        /* --xPos: 50%;
+        --yPos: 50%; */
+        body {
+            margin: 0;
+            /* position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); */
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: aliceblue;
+            font-family: 'Geologica',sans-serif;
+        }
+        .btn {
+            background-color: pink;
+            padding: 20px 40px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn span{
+            position: relative;
+            z-index: 1;
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            background-color: red;
+            width: 20px;
+            height: 20px;
+            left: var(--xPos);
+            top: var(--yPos);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            transition: width 0.5s, height 0.5s;
+        }
+        .btn:hover::before{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="btn"><span>Button</span></a>
+    <script>
+        const btnEle = document.querySelector('.btn');
+        btnEle.addEventListener('mouseover', (event) => {
+            const x = (event.pageX - btnEle.offsetLeft);
+            const y = (event.pageY - btnEle.offsetTop);
+
+            btnEle.style.setProperty('--xPos', `${x}px`);
+            btnEle.style.setProperty('--yPos', `${y}px`);
+        }
+    )
+    </script>
+</body>
+</html>
