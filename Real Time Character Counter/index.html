@@ -65,17 +65,34 @@
             right: 20px;
             font-weight: bold;
         }
+        /* .remaining-counter{
+            color: red;
+            font-size: larger;
+        } */
     </style>
 </head>
 <body>
     <p class="signature"><code> /\_/\ <br>|_- -_|<br>  \_/  </code></p>
     <div class="container">
         <h2>REAL-TIME CHARACTER COUNTER</h2>
-        <textarea id="textarea" class="textarea" placeholder="Enter your text here..." maxlength=""></textarea>
+        <textarea id="textarea" class="textarea" placeholder="Enter your text here..." maxlength="100"></textarea>
         <div class="counter-container">
-            <p>Total Character: <span class="total-counter" id="total-counter">30</span></p>
-            <p>Remaining: <span class="remaining-counter" id="remaining-counter">20</span></p>
+            <p>Total Character: <span class="total-counter" id="total-counter">0</span></p>
+            <p>Remaining: <span class="remaining-counter" id="remaining-counter">100</span></p>
         </div>
     </div>
+    <script>
+        const textareaEle = document.getElementById('textarea');
+        const totalCharEle = document.getElementById('total-counter');
+        const remainingCharEle = document.getElementById('remaining-counter');
+        textareaEle.addEventListener("keyup", () => {
+            updateCounter();
+        })
+
+        function updateCounter(){
+            totalCharEle.innerText = textareaEle.value.length;
+            remainingCharEle.innerText = 100 - textareaEle.value.length;
+        }
+    </script>
 </body>
 </html>
