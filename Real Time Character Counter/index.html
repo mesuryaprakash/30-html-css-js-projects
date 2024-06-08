@@ -75,7 +75,7 @@
     <p class="signature"><code> /\_/\ <br>|_- -_|<br>  \_/  </code></p>
     <div class="container">
         <h2>REAL-TIME CHARACTER COUNTER</h2>
-        <textarea id="textarea" class="textarea" placeholder="Enter your text here..." maxlength="100"></textarea>
+        <textarea id="textarea" class="textarea" placeholder="Enter your text here..." maxlength="200"></textarea>
         <div class="counter-container">
             <p>Total Character: <span class="total-counter" id="total-counter">0</span></p>
             <p>Remaining: <span class="remaining-counter" id="remaining-counter">100</span></p>
@@ -89,9 +89,11 @@
             updateCounter();
         })
 
+        updateCounter()
+
         function updateCounter(){
             totalCharEle.innerText = textareaEle.value.length;
-            remainingCharEle.innerText = 100 - textareaEle.value.length;
+            remainingCharEle.innerText = textareaEle.getAttribute("maxLength") - textareaEle.value.length;
         }
     </script>
 </body>
