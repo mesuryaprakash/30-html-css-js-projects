@@ -22,6 +22,7 @@
             transform: translateX(-50%);
             left: 50%;
             top: -50px;
+            object-fit: cover;
         }
         .testimonial-container{
             border: solid 1px black;
@@ -44,5 +45,46 @@
         <p class="text">Apple's mobile phone is unparalleled in design and functionality. I am amazed by the sleek design and powerful performance of their product. The customer service experience was exceptional from start to finish, making my purchase a breeze. Thank you, Apple, for exceeding my expectations.</p>
         <h4 class="username">- Alexander Hipp</h4>
     </div>
+    <script>
+        const testimonial = [
+            {
+                name: "Alexander Hipp",
+                profile: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                text: "Apple's mobile phone is unparalleled in design and functionality. I am amazed by the sleek design and powerful performance of their product. The customer service experience was exceptional from start to finish, making my purchase a breeze. Thank you, Apple, for exceeding my expectations.",
+            },
+            {
+                name: "Emily Johnson",
+                profile: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                text: "I am truly impressed with Apple's Mobile Phone. The design is sleek and the performance is top-notch. I can't imagine using any other device now. Thank you, Apple, for creating such an amazing product!",
+            },
+            {
+                name: "Christian Buehner",
+                profile: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                text: "Apple's mobile phones are sleek and innovative, setting them apart from the competition. The quality and design of their products are unmatched, making them a top choice for tech-savvy individuals.",
+            }
+        ]
+
+        const imgEle = document.querySelector('img');
+        const textEle = document.querySelector('.text');
+        const usernameEle = document.querySelector('.username');
+
+        let index = 0;
+        function updateTestimonial(){
+            const {name, profile, text} = testimonial[index];
+            // console.log(testimonial[index])
+            imgEle.src = profile;
+            textEle.innerText = text;
+            usernameEle.innerText = name;
+            index++;
+            if(index === testimonial.length){
+                index = 0;
+            }
+            setTimeout(() => {
+                updateTestimonial()
+            },2000)
+        }
+
+        updateTestimonial();
+    </script>
 </body>
 </html>
