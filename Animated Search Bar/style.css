@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    font-family: "Space Mono", sans-serif;
+
+}
+body{
+    /* z-index: 10; */
+    padding: 40px;
+    background-color: rgb(82, 99, 255);
+    border: solid 8px rgb(34, 34, 234);
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    gap: 20px;;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+.signature::before{
+    content: " /\\_/\\ \A|_- -_|\A   \\_/  ";
+    white-space: pre;
+}
+.signature{
+    margin: 0;
+    /* color: white; */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+    /* margin: 0; */
+}
+.magnifier{
+    position: absolute;
+    left: 16px;
+    /* top: 16px; */
+    width: 30px;
+    cursor: pointer;
+    /* transition: width .5s ease-in-out; */
+}
+.mic-icon{
+    width: 24px;
+    position: absolute;
+    right: 16px;
+    transition: width .5s ease-in-out;
+    transition-delay: .5s;
+}
+.search-bar-container{
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    width: 60%;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    /* height: 60px;
+    width: 100%; */
+    padding: 16px 32px;
+    box-shadow: 0 16px 0px -8px rgba(0, 0, 0, 0.5);
+    transition: width 1s ease-in-out;
+}
+.search-bar-container .input{
+    border: none;
+    background-color: transparent;
+    /* width: 100%; */
+    outline: none;
+    /* width: ; */
+    margin: 0px 20px;
+    color: black;
+    /* outline: none;
+    background-color: transparent;
+    font-size: 24px; */
+    width: 100%; 
+    transition: width .5s ease-in-out;
+    transition-delay: .5s;
+    
+}
+.active.search-bar-container{
+    width: 0px;
+}
+
+.active .input{
+    width: 0;
+}
+.active .mic-icon{
+    width: 0;
+}
