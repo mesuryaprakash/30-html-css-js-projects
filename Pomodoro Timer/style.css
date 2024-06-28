@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    font-family: 'Space Mono', sans-serif;
+}
+body{
+    padding: 40px;
+    background-color: rgb(82, 99, 255);
+    border: solid 8px rgb(34, 34, 234);
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    gap: 20px;;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+.signature::before{
+    content: " /\\_/\\ \A|_- -_|\A   \\_/  ";
+    white-space: pre;
+}
+.signature{
+    margin: 0;
+    /* color: white; */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+    /* margin: 0; */
+}
+h2{
+    font-size:32px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h3{
+    font-size:64px;
+    font-weight: 700;
+    text-align: center;
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* text-align: start; */
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 16px 0px -8px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(rgba(255,255,255,0.8) 2px, rgba(0,0,0,0) 1px),linear-gradient(rgba(255, 129, 39, 0.8) 100%, rgba(0,0,0,0)), white;
+    padding: 40px;
+}
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.btn{
+    width: 100%;
+    padding: 8px 24px;
+    border: none;
+    outline: none;
+    box-shadow: 0 8px 0px -4px rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    text-transform: uppercase;
+    /* font-weight: ; */
+    /* background: linear-gradient(rgba(255,255,255,0.4) 2px, rgba(0,0,0,0) 1px),linear-gradient( 0.28turn, rgb(255, 129, 39) 65%, rgba(255, 129, 39, 0.8) 1px), white; */
+}
+.btn:hover{
+    filter: brightness(1.2);
+    color: black;
+}
+
+.btn:active{
+    transform: translateY(4px);
+    box-shadow: 0 4px 0px -2px rgba(0, 0, 0, 0.5);
+}
+.btn:nth-child(1){
+    background: linear-gradient(rgba(255,255,255,0.4) 2px, rgba(0,0,0,0) 1px),linear-gradient( 0.28turn, rgb(18, 253, 5) 65%, rgba(53, 255, 39, 0.8) 1px), white;
+}
+.btn:nth-child(2){
+    background: linear-gradient(rgba(255,255,255,0.4) 2px, rgba(0,0,0,0) 1px),linear-gradient( 0.28turn, rgb(255, 50, 50) 65%, rgba(255, 50, 50, 0.8) 1px), white;
+}
+.btn:nth-child(3){
+    background: linear-gradient(rgba(255,255,255,0.4) 2px, rgba(0,0,0,0) 1px),linear-gradient( 0.28turn, rgb(168, 168, 168) 65%, rgba(168, 168, 168, 0.8) 1px), white;
+}
