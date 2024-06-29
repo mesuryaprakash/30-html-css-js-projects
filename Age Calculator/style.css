@@ -1,0 +1,76 @@
+*{
+    /* padding: 0; */
+    margin: 0;
+    font-family: 'Space Mono','Helvitica', sans-serif;
+    color: whitesmoke;
+}
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    border: solid 8px rgb(34, 34, 234);
+    background-color: rgb(82, 99, 255);
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+.signature::before{
+    content: " /\\_/\\ \A|_- -_|\A   \\_/  ";
+    white-space: pre;
+}
+.signature{
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.4) 4px, rgba(0,0,0,0) 1px),linear-gradient( 0.28turn, rgb(255, 129, 39) 65%, rgba(255, 129, 39, 0.8) 1px), white;
+    box-shadow: 0 16px 0px -8px rgba(0, 0, 0, 0.5);
+    width: 60%;
+}
+.input-container{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+.input-container div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+#dob{
+    flex-grow: 1;
+    /* width: 100%; */
+    gap: 20px;
+    padding: 10px;
+    border: none;
+    color: #333;
+}
+
+#btn{
+    background: linear-gradient(rgba(255,255,255,0.4) 2px, rgba(0,0,0,0) 1px),linear-gradient( 0.28turn, rgb(82, 99, 255) 65%, rgb(82, 99, 255) 1px), white;
+    /* width: 100%; */
+    padding: 8px 24px;
+    border: none;
+    outline: none;
+    box-shadow: 0 8px 0px -4px rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+#btn:active{
+    transform: translateY(4px);
+    box-shadow: 0 4px 0px -2px rgba(0, 0, 0, 0.5);
+}
