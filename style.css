@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    border: solid 8px rgb(34, 34, 234);
+    background-color: rgb(82, 99, 255);
+    height: 100vh;
+    box-sizing: border-box;
+    flex-direction: column;
+    font-family: "Space Mono", sans-serif;
+    color: white;
+    position: relative;
+}
+.signature::before{
+    content: "  /\\_/\\ \A|_- -_|\A    \\_/  ";
+    white-space: pre;
+}
+.signature{
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+}
+
+#extension-div-id, #loom-companion-mv3, #shadow-host-companion, .calendly-lifecycle-optibutton_singleton, .calendly-frame-tag, #extension-mmplj,
+.some-extension-class {
+  display: none !important;
+}
+
+/* [data-v-10465fb6] {
+  display: none !important;
+} */
